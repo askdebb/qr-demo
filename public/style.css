@@ -1,0 +1,8 @@
+.custom-navbar
+ {
+    position: fixed !important;
+    top: 0;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1020;
+}

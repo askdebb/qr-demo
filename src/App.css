@@ -1,0 +1,17 @@
+.w-full {
+    width: 100%;
+}
+
+.w-justify {
+    width: min(100%, 70rem);
+}
+
+/* Inactive tab - set text color to secondary */
+.custom-tabs .nav-item .nav-link {
+    color: var(--bs-secondary); /* Set inactive color to secondary */
+  }
+  
+  /* Active tab - set text color to primary */
+  .custom-tabs .nav-item .nav-link.active {
+    color: var(--bs-); /* Set active color to primary */
+  }

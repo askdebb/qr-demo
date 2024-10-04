@@ -1,0 +1,297 @@
+/* 
+* {
+  font-family: "Sen", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+margin: 0;
+padding: 0;
+box-sizing: border-box  ;
+}
+
+
+.qrCodeContainer {
+  position: relative; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  width: 100%; 
+  height: auto;
+  z-index: 1;
+}
+
+.qrcodeModal {
+  position: absolute !important;
+  top: 50% !important;
+  left: 21% !important;
+  transform: translate(0%, -60%) !important;
+  height: auto !important;
+  right: 10px !important;
+  z-index: 2;
+} */
+
+* {
+  font-family: "Sen", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.qrCodeContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  padding: 20px; /* Add padding for consistent spacing */
+}
+
+.qrcodeModal {
+  position: absolute;
+  top: 50%;
+  left: 49%;
+  transform: translate(-50%, -50%); /* Center QR code perfectly */
+  z-index: 2;
+  width: 200px; /* Ensure width is appropriate */
+  height: 200px; /* Ensure height is appropriate */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Optional frame styling for DynamicSVG */
+.qrCodeContainer .DynamicSVG {
+  width: 220px; /* Adjust according to frame size */
+  height: 220px;
+  z-index: 1;
+}
+
+
+@media (max-width: 768px) { 
+  .qrcodeModal {
+      position: absolute !important;
+      top: 50% !important;
+      left: 10% !important;
+      transform: translate(0%, -65%) !important;
+      height: auto !important;
+      right: 10px !important;
+  }
+
+  .modal {
+    width: 1000px !important;
+  }
+
+}
+
+@media (max-width: 430px) { 
+  .qrcodeModal {
+      position: absolute !important;
+      top: 50% !important;
+      left: 17% !important;
+      transform: translate(0%, -65%) !important;
+      height: auto !important;
+      /* right: 10px !important; */
+  }
+  .formModal-form {
+    display: block !important;
+    inline-size: 35% !important;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .Textfield {
+    width: 100% !important;
+  }
+
+  .modal-footer {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    margin-left:30px !important;
+  }
+
+  .divider {
+    width: 30% !important;
+    margin-right: -30px !important; 
+    border: 1px solid #000; 
+  }
+}
+
+@media (max-width: 414px) { 
+  .qrcodeModal {
+      position: absolute !important;
+      top: 50% !important;
+      left: 17% !important;
+      transform: translate(0%, -65%) !important;
+      height: auto !important;
+      right: 10px !important;
+  }
+  .formModal-form {
+    display: block !important;
+    inline-size: 35% !important;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .Textfield {
+    width: 100% !important;
+  }
+
+  .modal-footer {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    margin-left:30px !important;
+  }
+  .divider {
+    width: 25% !important;
+    margin-right: -30px !important; 
+    border: 1px solid #000; 
+  }
+}
+
+@media (max-width: 390px) { 
+  .qrcodeModal {
+      position: absolute !important;
+      top: 50% !important;
+      left: 15% !important;
+      transform: translate(0%, -65%) !important;
+      height: auto !important;
+      right: 10px !important;
+  }
+  .formModal-form {
+    display: block !important;
+    inline-size: 33% !important;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .Textfield {
+    width: 100% !important;
+  }
+
+  .modal-footer {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    margin-left:30px !important;
+  }
+
+  .divider {
+    width: 25% !important;
+    margin-right: -30px !important; 
+    border: 1px solid #000; 
+  }
+
+}
+
+@media (max-width: 375px) { 
+  .qrcodeModal {
+      position: absolute !important;
+      top: 50% !important;
+      left: 13% !important;
+      transform: translate(0%, -69%) !important;
+      height: auto !important;
+      right: 10px !important;
+      width: 150px;
+      height: 150px;
+  }
+  .formModal-form {
+    display: block !important;
+    inline-size: 32% !important;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .Textfield {
+    width: 100% !important;
+  }
+
+  .modal-footer {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    margin-left: 30px !important;
+  }
+
+  .divider {
+    width: 25% !important;
+    margin-right: -30px !important; 
+    border: 1px solid #000; 
+  }
+
+}
+@media (max-width: 360px) { 
+  .formModal-form {
+    display: block !important;
+    inline-size: 30% !important;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .Textfield {
+    width: 100% !important;
+  }
+
+  .modal-footer {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    margin-left: 30px !important;
+  }
+
+  .divider {
+    width: 30% !important;
+    margin-right: -30px !important; 
+    border: 1px solid #000; 
+  }
+
+  .qrCodeContainer {
+    margin-left: -39rem;
+    margin-top: -5rem;
+    position: relative !important; /* Keep positioning context */
+    padding: 10px !important; /* Add some padding to ensure elements don't touch edges */
+    width: 100% !important; /* Ensure full width */
+    height: auto !important; /* Adjust height as needed */
+    display: flex !important; /* Enable flexbox layout */
+    justify-content: center !important; /* Center content horizontally */
+    align-items: center !important; /* Center content vertically */
+  }
+
+  
+   .DynamicSVG {
+    position: relative;
+    margin-left: -20rem !important;
+    /* margin-top: -5rem !important; */
+    width: 90%; /* Adjusted for better fit on small screens */
+    height: 200px; /* Maintain aspect ratio */
+    max-width: 200px; /* Limit maximum width */
+    z-index: 1; /* Ensure it is below the QR code */
+  }
+
+  .qrcodeModal {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important; /* Center horizontally */
+    transform: translate(-25%, -30%) !important; /* Center vertically */
+    width: 200px; /* Adjusted width for better fit */
+    height: 200px; /* Adjusted height for better fit */
+    z-index: 2; /* Ensure QR code stays above the frame */
+  }
+}
+
+
+
+.btn-focus:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
